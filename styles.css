@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 div.nav-bar {
@@ -32,6 +33,7 @@ ul li {
     font-size: 1.1rem;
 }
 
+
 ul li a {
     text-decoration: none;
     color: #88949B;
@@ -39,7 +41,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #304353;
+    /* color: #304353; */
     background: #fff;
     padding: 0.5rem;
 }
@@ -122,12 +124,13 @@ div.background p {
 div.hero-background-pos {
     position: absolute;
     right: 0px;
-    left: 66%;
+    left: 80%;
     background: #fff;
     width: 140px;
     height: 140px;
     border-radius: 50%;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
+    z-index: -1;
 }
 
 div.snapshot-team {
@@ -344,4 +347,156 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+
+.icon {
+    display: none;
+}
+/* ######### MEDIA QUERIES */
+/* Desktop */
+@media screen and (max-width: 1024px) {
+
+    div.gallery-section {
+        padding: 7rem 4rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 45%;
+    }
+
+    textarea {
+        width: 91%;
+        height: 262px;
+        margin-right: 12px;
+    }
+
+    div.footer {
+        padding: 7rem 3rem;
+    }
+}
+
+/* Tablets breakpoints */
+@media screen and (max-width: 768px) {
+    div.nav-bar {
+        padding: 1rem 1.5rem;
+    }
+
+    ul li a {
+        padding: 1vw;
+    }
+
+    div.hero-section {
+        padding: 10rem 5rem;
+    }
+ 
+}
+
+/* Mobiles */
+@media screen and (max-width: 576px) {
+    div.nav-bar a.icon, div.nav-bar a.close {
+        font-size: 1.5em;
+    }
+
+    div.nav-bar {
+        padding: 2rem 1.5rem;
+    }
+
+    .icon {
+        display: block;
+    }
+    
+    .close {
+        display: none;
+    }
+
+    ul li {
+        margin: 5vh 2vw;
+        font-size: 22px;
+    }    
+
+    ul li a:hover {
+        position: relative;
+        left: 20px;
+        padding: 2.5rem;
+    }
+
+    ul.nav-links {
+        display: none;
+        padding: 3em 4em 0 0;
+        text-align: center;
+    }
+
+    div.hero-section {
+        padding: 10rem 1.5rem;
+    }
+
+    div.hero-content-heading p {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    div.hero-content-btn a {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    div.background {
+        padding: 15px 17px;
+        overflow: hidden;
+    }
+
+    div.background h4 {
+        padding: 1rem 6rem;
+    }
+
+    div.background p {
+        padding-left: 0.3rem;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    div.hero-background {
+        padding: 5rem 1.5rem;
+    }
+
+    /* div.hero-background-pos {
+        width: 90px;
+        height: 90px;
+        top: 94%;
+        left: 70%;
+    } */
+
+    div.snapshot-box {
+        padding: 4rem 0rem;
+    }
+
+    div.snapshot-box-content {
+        flex-direction: column;
+    }
+
+    div.snapshot-team {
+        padding-top: 4rem;
+    }
+
+    div.snapshot-team p {
+        padding: 0.8rem 2rem 0 2rem;
+    }
+
+    div.box1, div.box3 {
+        width: 40vh;
+    }
+
+    div.footer {
+        padding: 2rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 50%;
+    }
+
+    textarea {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
